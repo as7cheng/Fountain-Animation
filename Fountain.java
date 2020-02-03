@@ -192,6 +192,13 @@ public class Fountain {
 			}
 		}
 	
+	/**
+	 * This method should do removing the old particles which is older than 80
+	 * 
+	 * @param maxAge the particle length longer than 80 
+	 * 
+	 *              No return type
+	 */
 	private static void removeOldParticles(int maxAge) {
 		// Track the whole array
 		for (int i = 0; i < particles.length; i++) {
@@ -207,15 +214,26 @@ public class Fountain {
 		}
 	}
 	
-	
-	
-
+	/**
+	 * This method set up the mouse's position
+	 * 
+	 * @param posX mouse's position on x-coordinate 
+	 * @param posY mouse's position on y-coordinate
+	 *
+	 *              No return type
+	 */
 	public static void mousePressed(int posX, int posY) {
 		// Move the fountain's starting position as the user's choice made by mouse
 		positionX = posX;
 		positionY = posY;
 	}
-
+	
+	/**
+	 * This method check if the user pressed p to save a screenshot
+	 * @param click User's click
+	 *
+	 * No return type
+	 */
 	public static void keyPressed(char click) {
 		// When users click left button of the mouse
 		if (click == 'p' ) {
@@ -265,10 +283,7 @@ public class Fountain {
 			return true;
 		}
 
-
-
-		
-		return false; // TODO: implement this test
+		return false; 
 	}
 
 	/**
